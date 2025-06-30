@@ -1,4 +1,5 @@
 /* 다이소 여름신상 css */
+body * {transition:all 0.5s;}
 .wrap {}
 /* ============================1. intro */
 .wrap .intro {
@@ -39,12 +40,29 @@
 }
 .wrap .intro .bg_imgs {}
 .wrap .intro .bg_imgs * {position:absolute; z-index:10;}
-.wrap .intro .bg_imgs img:nth-child(1) {left:60px; top:-90px;}
-.wrap .intro .bg_imgs img:nth-child(2) {left:30px; top:160px;}
-.wrap .intro .bg_imgs img:nth-child(3) {right:-350px; top:-370px;}
-.wrap .intro .bg_imgs img:nth-child(4) {left:-450px; top:400px;}
-.wrap .intro .bg_imgs img:nth-child(5) {right:-100px; top:550px; width:500px;}
-.wrap .intro .bg_imgs img:nth-child(6) {right:370px; top:-50px; width:300px;}
+.wrap .intro .bg_imgs img:nth-child(1) {left:60px; top:-90px; animation:left_ani 5s linear infinite alternate;}
+.wrap .intro .bg_imgs img:nth-child(2) {left:30px; top:160px; animation:left_ani_star 7s linear infinite alternate;}
+.wrap .intro .bg_imgs img:nth-child(3) {right:-350px; top:-370px; animation:tube 8s linear infinite alternate;}
+.wrap .intro .bg_imgs img:nth-child(4) {left:-450px; top:400px; animation:tube 8s linear infinite alternate-reverse;}
+.wrap .intro .bg_imgs img:nth-child(5) {right:-100px; top:550px; width:500px; animation:tube 6s linear infinite alternate-reverse;}
+.wrap .intro .bg_imgs img:nth-child(6) {right:370px; top:-50px; width:300px; animation:sunglass 5s linear infinite alternate;}
+/* images keyframes */
+@keyframes left_ani {
+    from {transform:translate(0, 0) rotate(0);}
+    to {transform:translate(50px, 50px) rotate(20deg);}
+}
+@keyframes left_ani_star {
+    from {transform:translate(0, 0) rotate(0);}
+    to {transform:translate(30px, 30px) rotate(-20deg);}
+}
+@keyframes tube {
+    from {transform:translate(0, 0) rotate(0);}
+    to {transform:translate(-50px, 40px) rotate(-30deg);}
+}
+@keyframes sunglass {
+    from {transform:translate(0, 0) rotate(0);}
+    to{transform:translate(-40px, 50px) rotate(-10deg);}
+}
 /* ============================2. quiz */
 .wrap .quiz {height:100vh; padding:100px 0; position:relative; overflow:hidden;}
 .wrap .quiz .container {

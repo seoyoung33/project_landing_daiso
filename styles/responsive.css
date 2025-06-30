@@ -1,0 +1,10 @@
+@media screen and (max-width:1249px){
+    /* ============================1. intro */
+    .wrap .intro .container {margin:0 80px;}
+    /* ============================2. quiz */
+    .wrap .quiz .container .select li {width:200px;}
+    .wrap .quiz .container .select li img {width:150px;}
+    /* ============================3. new */
+    /* ============================4. pet */
+    /* ============================5. footer */
+}
